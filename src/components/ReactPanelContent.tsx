@@ -3,11 +3,6 @@ import '../App.css';
 import Axios from 'axios'
 import querystring from 'querystring'
 
-interface Token {
-  access_token: string;
-  expires_in: number;
-}
-
 export interface ReactPanelContentProps {
   viewer: any;
 }
@@ -23,7 +18,7 @@ class ReactPanelContent extends React.Component<ReactPanelContentProps, {}> {
 
   }
   getAccessToken(docName:string, paramJSON:string) {
-    let inputBucketName = 'd1sfnergmbzannxr1zsgushii1h4zalw' + '_ainput';
+    let inputBucketName = 'd1sfnergmbzannxr1zsgushii1h4zalw_ainput';
     let uploadZipName = 'BalcoTemplate.zip';
     let that = this
     
@@ -92,8 +87,8 @@ class ReactPanelContent extends React.Component<ReactPanelContentProps, {}> {
   }
   sendConfig(docName: string, paramJSON: string) {
     let activityID = 'BalcoActivity';
-    let qualifiedName = 'd1SfNerGmBZAnNxR1zsGuSHiI1H4zAlw' + '.' + activityID + '+beta';
-    let outputBucketName = 'd1sfnergmbzannxr1zsgushii1h4zalw' + '_aoutput';
+    let qualifiedName = 'd1SfNerGmBZAnNxR1zsGuSHiI1H4zAlw.' + activityID + '+beta';
+    let outputBucketName = 'd1sfnergmbzannxr1zsgushii1h4zalw_aoutput';
     let that = this;
     let text = JSON.stringify({
       'activityId': qualifiedName,
@@ -106,7 +101,7 @@ class ReactPanelContent extends React.Component<ReactPanelContentProps, {}> {
           'url': paramJSON//'data:application/json,' + JSON.stringify({ 'balconyDepth':  _depth, 'balconyWidth': _width})
         },
         'OutputIFC': {
-          'url': 'https://developer.api.autodesk.com/oss/v2/' + "buckets/" + encodeURIComponent(outputBucketName) + '/objects/' + encodeURIComponent(docName),
+          'url': 'https://developer.api.autodesk.com/oss/v2/buckets/' + encodeURIComponent(outputBucketName) + '/objects/' + encodeURIComponent(docName),
           'headers': {
             'Authorization': 'Bearer ' + that.access_token,
             'Content-type': 'application/octet-stream'
@@ -161,67 +156,67 @@ class ReactPanelContent extends React.Component<ReactPanelContentProps, {}> {
     let that: any = this;
     let viewer: any = this.viewer;
 
-    if (depthVal == 5 && widthVal == 8) {
+    if (depthVal === 5 && widthVal === 8) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzh4NS56aXA"
     }
-    else if (depthVal == 5 && widthVal == 6) {
+    else if (depthVal === 5 && widthVal === 6) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzZ4NS56aXA"
     }
-    else if (depthVal == 4 && widthVal == 7) {
+    else if (depthVal === 4 && widthVal === 7) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzd4NC56aXA"
     }
-    else if (depthVal == 3 && widthVal == 6) {
+    else if (depthVal === 3 && widthVal === 6) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzZ4My56aXA"
     }
-    else if (depthVal == 4 && widthVal == 6) {
+    else if (depthVal === 4 && widthVal === 6) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzZ4NC56aXA"
     }
-    else if (depthVal == 3 && widthVal == 7) {
+    else if (depthVal === 3 && widthVal === 7) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzd4My56aXA"
     }
-    else if (depthVal == 5 && widthVal == 7) {
+    else if (depthVal === 5 && widthVal === 7) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzd4NS56aXA"
     }
-    else if (depthVal == 3 && widthVal == 8) {
+    else if (depthVal === 3 && widthVal === 8) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzh4My56aXA"
     }
-    else if (depthVal == 4 && widthVal == 8) {
+    else if (depthVal === 4 && widthVal === 8) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzh4NC56aXA"
     }
-    else if (depthVal == 3 && widthVal == 9) {
+    else if (depthVal === 3 && widthVal === 9) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzl4My56aXA"
     }
-    else if (depthVal == 4 && widthVal == 9) {
+    else if (depthVal === 4 && widthVal === 9) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzl4NC56aXA"
     }
-    else if (depthVal == 5 && widthVal == 9) {
+    else if (depthVal === 5 && widthVal === 9) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzl4NS56aXA"
     }
-    else if (depthVal == 3 && widthVal == 10) {
+    else if (depthVal === 3 && widthVal === 10) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzEweDMuemlw"
     }
-    else if (depthVal == 4 && widthVal == 10) {
+    else if (depthVal === 4 && widthVal === 10) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzEweDQuemlw"
     }
-    else if (depthVal == 5 && widthVal == 10) {
+    else if (depthVal === 5 && widthVal === 10) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzEweDUuemlw"
     }
-    else if (depthVal == 3 && widthVal == 11) {
+    else if (depthVal === 3 && widthVal === 11) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzExeDMuemlw"
     }
-    else if (depthVal == 4 && widthVal == 11) {
+    else if (depthVal === 4 && widthVal === 11) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzExeDQuemlw"
     }
-    else if (depthVal == 5 && widthVal == 11) {
+    else if (depthVal === 5 && widthVal === 11) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzExeDUuemlw"
     }
-    else if (depthVal == 3 && widthVal == 12) {
+    else if (depthVal === 3 && widthVal === 12) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzEyeDMuemlw"
     }
-    else if (depthVal == 4 && widthVal == 12) {
+    else if (depthVal === 4 && widthVal === 12) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzEyeDQuemlw"
     }
-    else if (depthVal == 5 && widthVal == 12) {
+    else if (depthVal === 5 && widthVal === 12) {
       documentId = "urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6d2ViY29uZmlndXJhdG9ybmV3L21vZGVsXzEyeDUuemlw"
     }
 

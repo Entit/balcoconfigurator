@@ -3,13 +3,6 @@ import ReactPanel from './ReactPanel';
 export class PropertiesExtension extends Autodesk.Viewing.Extension {
     panel?: any;
 
-    constructor (viewer: any, options: any) {
-    super (viewer, options)
-
-    
-    }
-    
-
     createUI() {
         let viewer = this.viewer;
         let panel = this.panel

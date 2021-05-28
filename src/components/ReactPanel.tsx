@@ -1,6 +1,6 @@
 import ReactPanelContent from './ReactPanelContent'
 import ReactDOM from 'react-dom'
-import React, { useState }  from 'react'
+import React from 'react'
 const Autodesk = window.Autodesk;
 
 export default class ReactPanel extends Autodesk.Viewing.UI.DockingPanel {

@@ -55,7 +55,6 @@ class Viewer extends React.Component {
 
 
     var options2 = {};
-    let that: any = this;
     this.viewer.loadDocumentNode(doc, items[0], options2);
   }
   getForgeToken():Promise<Token> {
