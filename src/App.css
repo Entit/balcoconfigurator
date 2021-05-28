@@ -1,0 +1,27 @@
+.ReactDockingPanel {
+  height: 400px;
+  width: 250px;
+  resize: auto;
+  left: 10px;
+  top: 10px;
+  background-color: slategray !important;
+  }
+.adsk-viewing-viewer #toolbar-modelStructureTool{display:none!important}
+.adsk-viewing-viewer #toolbar-explodeTool{display:none!important}
+.adsk-viewing-viewer #toolbar-propertiesTool{display:none!important}
+.adsk-viewing-viewer #toolbar-settingsTool{display:none!important}
+
+.react-content {
+  margin-left: 10px;
+}
+.request-container {
+  display: flex;
+  flex-direction: column;
+}
+.request-button {
+  width: 150px;
+  margin: 5px 0 5px 0;
+}
+.doc {
+  width: 150px; 
+}

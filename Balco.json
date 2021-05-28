@@ -1,0 +1,23 @@
+{
+    "Type": "Revit",
+    "ClientID": "UabKdEC2RON1gGWxwGYBQynOzaAkDGSH",
+    "ClientSecret": "B1B3zgNLRpOAysHP",
+    "ClientIDProduction": "",
+    "ClientSecretProduction": "",
+    "InputAssemblyZipFile": "D:/VaultWorkingFolder/Designs/Projekt/Svedbergs/Svedbergs.zip",
+    "LocalAppPackage": "D:/Utveckling/VSOnline/Cadcraft - Forge Utils/Dev-branch/Inventor/Cadcraft.Forge.Inventor.ChangeParams/Cadcraft.Forge.Inventor.ChangeParamsPlugin/bin/Bundle/Cadcraft.Forge.Inventor.ChangeParamsPlugin.bundle.zip",
+    "AppId": "SvedbergsApplication",
+    "ActivityId": "SvedbergsActivity",
+    "EngineName": "Autodesk.Inventor+24",
+    "InputTopLevelAssembly": "MasterAssembly.iam",
+    "DABaseUrl": "https://developer.api.autodesk.com/da/us-east/v3/",
+    "ForgeDMBaseUrl": "https://developer.api.autodesk.com/oss/v2/",
+    "ReqInputArgName": "InventorDoc",
+    "ParamArgName": "InventorParams",
+    "assemblyReport": "assemblyReport.txt",
+    "ErrorReport": "errorReport.txt",
+    "OutputArgName1": "OutputPDF",
+    "OutputFileName1": "Svedbergs.pdf",
+    "OutputArgName2": "OutputZIP",
+    "OutputFileName2": "GlassDrawings.zip"
+}

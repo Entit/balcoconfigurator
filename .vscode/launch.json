@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${webRoot}/*",
+                "env": {
+                    "FORGE_CLIENT_ID": "gSwzAvsPjpIh5zn37tKLICN3hPgZ3EZi",
+                    "FORGE_CLIENT_SECRET": "sERcYyG9s5cZmAZc",
+                    "FORGE_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth",
+                    "HOME": "C:\\Users\\timnh\\Desktop\\testtest\\webconfigurator"
+                }
+            }
+        }
+    ]
+}
